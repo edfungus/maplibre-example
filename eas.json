@@ -1,0 +1,51 @@
+{
+  "cli": {
+    "version": ">= 9.2.0",
+    "promptToConfigurePushNotifications": false
+  },
+  "build": {
+    "testflight": {
+      "distribution": "store",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {},
+      "env": {}
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {},
+      "env": {}
+    },
+    "development": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true,
+        "image": "latest"
+      },
+      "env": {}
+    },
+    "production": {
+      "distribution": "store",
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "ios": {
+        "scheme": "abetterride"
+      },
+      "env": {}
+    },
+    "production-apk": {
+      "extends": "production",
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  }
+}
